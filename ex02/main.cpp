@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 23:27:57 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/12/05 23:59:53 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/12/06 00:11:28 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main ()
 {
-    Base *p = new A();
-    identify(*p);
-    identify(p);
+   // Base *p = new A();
+    identify(NULL);
+    identify(NULL);
 }
