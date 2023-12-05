@@ -6,7 +6,7 @@
 #    By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/01 23:08:33 by kkouaz            #+#    #+#              #
-#    Updated: 2023/12/01 23:13:03 by kkouaz           ###   ########.fr        #
+#    Updated: 2023/12/05 23:52:49 by kkouaz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Identify
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
-SRC = 
+SRC = Identify.cpp Base.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all : $(NAME)

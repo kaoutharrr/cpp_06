@@ -6,25 +6,80 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 23:24:59 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/12/01 23:32:20 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/12/05 23:53:17 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "A.hpp"
-#include "B.hpp"
-#include "C.hpp"
+#include"Header.hpp"
+
 
 Base * generate(void)
 {
-//     std :: srand(std :: time(0));
-//     int rand =  std :: rand();
+    std ::srand(std :: time(NULL));
+    int rand = std ::rand();
+    int i = rand % 3;
+
+    switch (i)
+    {
+        case 0 :
+            return(new A());
+        case 1 :
+            return(new B());
+        case 2 :
+
+            return(new C());
+            break;
+        default:
+            break;
+    }
+    return(NULL);
 }
 
 void identify(Base* p)
 {
+
+    if (dynamic_cast<A*>(p))
+        std :: cout << "A\n";
+    else if(dynamic_cast<B*>(p))
+        std :: cout << "B\n";
+    else if(dynamic_cast<C*>(p))
+        std :: cout << "C\n";
+    else
+        std :: cout << "not a derived class :)\n";
 }
+
 
 void identify(Base& p)
 {
-    re
+    Base d;
+
+    try
+    {
+        d = dynamic_cast<A&>(p);
+    }
+    catch(const std::bad_cast& e)
+    {
+        try
+        {
+            d = dynamic_cast<B&>(p);
+        }
+        catch(const std::bad_cast& e)
+        {
+            try
+            {
+                d = dynamic_cast<C&>(p);
+            }
+            catch(const std::bad_cast& e)
+            {
+                std :: cout << "not a derived class :)\n";
+                return;
+            }
+            std :: cout << "C\n";
+            return;
+        }
+        std :: cout << "B\n";
+        return;
+    }
+        std :: cout << "A\n";
 }
+

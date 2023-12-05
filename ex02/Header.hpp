@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.cpp                                           :+:      :+:    :+:   */
+/*   Header.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 23:15:30 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/12/02 19:21:21 by kkouaz           ###   ########.fr       */
+/*   Created: 2023/12/05 20:09:31 by kkouaz            #+#    #+#             */
+/*   Updated: 2023/12/05 20:37:52 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Base.hpp"
+#ifndef HEADER_HPP
+#define HEADER_HPP
 
-Base :: ~Base()
-{
-    
-}
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
+#include <ctime>
+
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);
+
+
+#endif
