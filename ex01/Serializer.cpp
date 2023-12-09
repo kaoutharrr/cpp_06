@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 22:05:25 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/12/01 22:55:56 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/12/06 00:05:01 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ uintptr_t Serializer ::  serialize(Data* ptr)
 Data*  Serializer :: deserialize(uintptr_t raw)
 { 
     return(reinterpret_cast<Data*>(raw));
-    
 }
 

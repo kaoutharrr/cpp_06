@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 23:24:59 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/12/05 23:53:17 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/12/09 10:14:25 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 Base * generate(void)
 {
-    std ::srand(std :: time(NULL));
     int rand = std ::rand();
     int i = rand % 3;
 
@@ -26,18 +25,17 @@ Base * generate(void)
         case 1 :
             return(new B());
         case 2 :
-
             return(new C());
             break;
         default:
             break;
     }
+
     return(NULL);
 }
 
 void identify(Base* p)
 {
-
     if (dynamic_cast<A*>(p))
         std :: cout << "A\n";
     else if(dynamic_cast<B*>(p))
@@ -69,7 +67,7 @@ void identify(Base& p)
             {
                 d = dynamic_cast<C&>(p);
             }
-            catch(const std::bad_cast& e)
+            catch(const std::bad_cast e)
             {
                 std :: cout << "not a derived class :)\n";
                 return;
